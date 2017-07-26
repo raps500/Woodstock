@@ -7,42 +7,47 @@ at the minimum. Other modifications like disabling hardware trace could be also
 implemented to reduce LE usage and fit it in a LCMXO2-1200. The target board
 used is shown below. The populated FPGA is a LCMXO2-7000ZE.
 
+<p align=left">
+  <img src="/01_PS11_7000_RevA/PS11_67.jpg">
+  Working prototype
+</p>
+
 Compilation report
 
 
 Design Summary<br>
-   Number of registers:    290 out of  7209 (4%)
-      PFU registers:          289 out of  6864 (4%)
-      PIO registers:            1 out of   345 (0%)
-   Number of SLICEs:       644 out of  3432 (19%)
-      SLICEs as Logic/ROM:    644 out of  3432 (19%)
-      SLICEs as RAM:            0 out of  2574 (0%)
-      SLICEs as Carry:         54 out of  3432 (2%)
-   Number of LUT4s:        1275 out of  6864 (19%)
-      Number used as logic LUTs:        1167
-      Number used as distributed RAM:     0
-      Number used as ripple logic:      108
-      Number used as shift registers:     0
-   Number of PIO sites used: 30 + 4(JTAG) out of 115 (30%)
-   Number of block RAMs:  11 out of 26 (42%)
-   Number of GSRs:  1 out of 1 (100%)
-   EFB used :       No
-   JTAG used :      No
-   Readback used :  No
-   Oscillator used :  Yes
-   Startup used :   No
-   POR :            On
-   Bandgap :        On
-   Number of Power Controller:  0 out of 1 (0%)
-   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
-   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
-   Number of DCCA:  0 out of 8 (0%)
-   Number of DCMA:  0 out of 2 (0%)
-   Number of PLLs:  0 out of 2 (0%)
-   Number of DQSDLLs:  0 out of 2 (0%)
-   Number of CLKDIVC:  0 out of 4 (0%)
-   Number of ECLKSYNCA:  0 out of 4 (0%)
-   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Number of registers:    290 out of  7209 (4%)<br>
+      PFU registers:          289 out of  6864 (4%)<br>
+      PIO registers:            1 out of   345 (0%)<br>
+   Number of SLICEs:       644 out of  3432 (19%)<br>
+      SLICEs as Logic/ROM:    644 out of  3432 (19%)<br>
+      SLICEs as RAM:            0 out of  2574 (0%)<br>
+      SLICEs as Carry:         54 out of  3432 (2%)<br>
+   Number of LUT4s:        1275 out of  6864 (19%)<br>
+      Number used as logic LUTs:        1167<br>
+      Number used as distributed RAM:     0<br>
+      Number used as ripple logic:      108<br>
+      Number used as shift registers:     0<br>
+   Number of PIO sites used: 30 + 4(JTAG) out of 115 (30%)<br>
+   Number of block RAMs:  11 out of 26 (42%)<br>
+   Number of GSRs:  1 out of 1 (100%)<br>
+   EFB used :       No<br>
+   JTAG used :      No<br>
+   Readback used :  No<br>
+   Oscillator used :  Yes<br>
+   Startup used :   No<br>
+   POR :            On<br>
+   Bandgap :        On<br>
+   Number of Power Controller:  0 out of 1 (0%)<br>
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)<br>
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)<br>
+   Number of DCCA:  0 out of 8 (0%)<br>
+   Number of DCMA:  0 out of 2 (0%)<br>
+   Number of PLLs:  0 out of 2 (0%)<br>
+   Number of DQSDLLs:  0 out of 2 (0%)<br>
+   Number of CLKDIVC:  0 out of 4 (0%)<br>
+   Number of ECLKSYNCA:  0 out of 4 (0%)<br>
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)<br>
 
 # Hardware
 
@@ -61,16 +66,17 @@ slows down the processor to about 800 opcodes per second, but the calculator rem
 
 <p align=left">
   <img src="/01_PS11_7000_RevA/PS11_Top.jpg">
+  Top copper side
 </p>
 <p align=left">
   <img src="/01_PS11_7000_RevA/PS11_Bottom.jpg">
+  Bottom copper side
 </p>
 <p align=left">
   <img src="/01_PS11_7000_RevA/IMG_20170427_134208272.jpg">
+  It's alive !
 </p>
-<p align=left">
-  <img src="/01_PS11_7000_RevA/PS11_67.jpg">
-</p>
+
 
 
 
