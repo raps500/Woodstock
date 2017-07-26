@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="NWS" device="LCMXO2-7000ZE-1TG144C" default_implementation="NWS">
+    <Options/>
+    <Implementation title="NWS" dir="NWS" description="NWS" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="NWS" top="NWS"/>
+        <Source name="../../04_NWS/dogm132.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../04_NWS/nws.v" type="Verilog" type_short="Verilog">
+            <Options top_module="NWS"/>
+        </Source>
+        <Source name="../../04_NWS/nws_hp67_xo2_7k.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../04_NWS/ws_defs.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../04_NWS/ws_hp67_disasm.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="regbank_lattice.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="NWS.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="NWS/NWS.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="NWS1.sty"/>
+</BaliProject>

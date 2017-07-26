@@ -1,0 +1,151 @@
+   1 000 1100001000      decimal
+   2 001 0000100111      gonc start
+   4 002 0000000000      nop
+   5 003 0000001111      gonc error     ; used for error
+   7 004 0000000000      nop
+   8 005 0000011011      gonc success
+  10 006 0000011010      0 -> a[w]
+  11 007 1101011010      if 0 # a[w]     ;test clear register a
+  12 008 0000000011      goyes error
+  13 009 0100011010      0 -> c[w]
+  14 00a 1101111010      if 0 # c[w]     ;test clear register c
+  15 00b 0000000011      goyes error
+  16 00c 1010111100      p <- 13
+  17 00d 1001011000      load constant 9
+  18 00e 1101111010      if 0 # c[w]     ;test load register c
+  19 00f 0000010101      goyes tstload0
+  20 010 0010101100      if p # 12    ;test p compare for not equal
+  22 011 0000000011      goyes error
+  23 012 0010100100      if p = 12    ;test p compare for equal
+  24 013 0000011010      goyes tstload1
+  25 014 0000001111      gonc error
+  27 015 1001011000      load constant 9
+  28 016 1001011000      load constant 9
+  29 017 1001011000      load constant 9
+  30 018 1001011000      load constant 9
+  31 019 1001011000      load constant 9
+  32 01a 1001011000      load constant 9
+  33 01b 1001011000      load constant 9
+  34 01c 1001011000      load constant 9
+  35 01d 1001011000      load constant 9
+  36 01e 1001011000      load constant 9
+  37 01f 1001011000      load constant 9
+  38 020 1001011000      load constant 9
+  39 021 1001011000      load constant 9
+  40 022 0010111010      c -> a[w]
+  41 023 0001111010      a -> b[w]
+  42 024 0101010000      rotate a left
+  43 025 1101011010      if 0 # a[w]
+  44 026 0000101110      goyes next0
+  45 027 0000001111      gonc error         ;rotate or cmp a # 0 fail
+  47 028 0110101110      a + 1 -> a[x]
+  48 029 1101001110      if 0 # a[x]
+  49 02a 0000001111      gonc error           ;a[x] + 1 error
+  50 02b 0110110110      a + 1 -> a[m]
+  51 02c 1101010110      if 0 # a[m]
+  52 02d 0000001111      gonc error           ;a[m] + 1 error
+  53 02e 0110110010      a + 1 -> a[s]
+  54 02f 1101010010      if 0 # a[s]
+  55 030 0000001111      gonc error           ;a[s] + 1 error
+  56 031 0111111010      c + 1 -> c[w]
+  57 032 1101111010      if 0 # c[w]
+  58 033 0000001111      gonc error         ;c[w] + 1 error
+  59 034 0100011010      0 -> c[w]
+  60 035 1010111100      p <- 13
+  61 036 1001011000      load constant 9  ; test registers
+  62 037 1111101000      c -> data register 15
+  63 038 1111111010      shift right c[w]
+  64 039 1110101000      c -> data register 14
+  65 03a 1111111010      shift right c[w]
+  66 03b 1101101000      c -> data register 13
+  67 03c 1111111010      shift right c[w]
+  68 03d 1100101000      c -> data register 12
+  69 03e 1111111010      shift right c[w]
+  70 03f 1011101000      c -> data register 11
+  71 040 1111111010      shift right c[w]
+  72 041 1010101000      c -> data register 10
+  73 042 1111111010      shift right c[w]
+  74 043 1001101000      c -> data register 9
+  75 044 1111111010      shift right c[w]
+  76 045 1000101000      c -> data register 8
+  77 046 1111111010      shift right c[w]
+  78 047 0111101000      c -> data register 7
+  79 048 1111111010      shift right c[w]
+  80 049 0110101000      c -> data register 6
+  81 04a 1111111010      shift right c[w]
+  82 04b 0101101000      c -> data register 5
+  83 04c 1111111010      shift right c[w]
+  84 04d 0100101000      c -> data register 4
+  85 04e 1111111010      shift right c[w]
+  86 04f 0011101000      c -> data register 3
+  87 050 1111111010      shift right c[w]
+  88 051 0010101000      c -> data register 2
+  89 052 0000011010      0 -> a[w]
+  90 053 0100011010      0 -> c[w]
+  91 054 0010111000      data register 2 -> c
+  92 055 0101011010      a + c -> a[w]
+  93 056 0011111000      data register 3 -> c
+  94 057 0101011010      a + c -> a[w]
+  95 058 0100111000      data register 4 -> c
+  96 059 0101011010      a + c -> a[w]
+  97 05a 0101111000      data register 5 -> c
+  98 05b 0101011010      a + c -> a[w]
+  99 05c 0110111000      data register 6 -> c
+ 100 05d 0101011010      a + c -> a[w]
+ 101 05e 0111111000      data register 7 -> c
+ 102 05f 0101011010      a + c -> a[w]
+ 103 060 1000111000      data register 8 -> c
+ 104 061 0101011010      a + c -> a[w]
+ 105 062 1001111000      data register 9 -> c
+ 106 063 0101011010      a + c -> a[w]
+ 107 064 1010111000      data register 10 -> c
+ 108 065 0101011010      a + c -> a[w]
+ 109 066 1011111000      data register 11 -> c
+ 110 067 0101011010      a + c -> a[w]
+ 111 068 1100111000      data register 12 -> c
+ 112 069 0101011010      a + c -> a[w]
+ 113 06a 1101111000      data register 13 -> c
+ 114 06b 0101011010      a + c -> a[w]
+ 115 06c 1110111000      data register 14 -> c
+ 116 06d 0101011010      a + c -> a[w]
+ 117 06e 1111111000      data register 15 -> c
+ 118 06f 0101011010      a + c -> a[w]
+ 119 070 1000011010      a - b -> a[w] ;use summed result to clear A
+ 120 071 1101011010      if 0 # a[w]
+ 121 072 0000000011      goyes error
+ 122 073 0100111010      a + b -> a[w] ;test decimal add
+ 123 074 0110111010      a + 1 -> a[w] ;clear a
+ 124 075 1101011010      if 0 # a[w]
+ 125 076 0000000011      goyes error
+ 126 077 0100011010      0 -> c[w]
+ 127 078 1001111010      c - 1 -> c[w]    ;test decimal sub
+ 128 079 0010011010      a ex c[w]
+ 129 07a 1000011010      a - b -> a[w] ;use summed result to clear A
+ 130 07b 1101011010      if 0 # a[w]
+ 131 07c 0000000011      goyes error
+ 132 07d 0000011010      0 -> a[w]
+ 133 07e 0100011010      0 -> c[w]
+ 134 07f 1001111010      c - 1 -> c[w]    ;test decimal sub
+ 135 080 1000111010      a - c -> c[w]    ;test reversed sub
+ 136 081 0010011010      a ex c[w]
+ 137 082 1001011010      a - 1 -> a[w]    ;test decimal sub on a
+ 138 083 1101011010      if 0 # a[w]
+ 139 084 0000000011      goyes error
+ 140 085 0100001110      0 -> c[x]     ;** test pointer and cmp gtle
+ 141 086 1000111100      p <- 1
+ 142 087 0111011000      load constant 7
+ 143 088 0010001110      a ex c[x]
+ 144 089 0111010000      p + 1 -> p
+ 145 08a 0110011000      load constant 6
+ 146 08b 1100011010      if a >= c[w]
+ 147 08c 0010010101      goyes next1
+ 148 08d 0000001111      gonc error    ;   error gtle or pointer increment
+ 150 08e 0111010000      p + 1 -> p
+ 151 08f 1001000010      a - 1 -> a[p]
+ 152 090 1100011010      if a >= c[w]     ;now is a[p] = c[p] (5)
+ 153 091 0010011011      goyes next2
+ 154 092 0000001111      gonc error    ;   error gtle or pointer increment
+ 156 093 1001000010      a - 1 -> a[p] ;now is a less than c (4 < 6)
+ 157 094 1100011010      if a >= c[w]
+ 158 095 0000000011      goyes error      ;error in gtle
+ 160 096 0000011011      gonc success

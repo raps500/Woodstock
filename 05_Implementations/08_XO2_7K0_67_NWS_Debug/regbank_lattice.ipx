@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="regbank_lattice" module="regbank_lattice" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2017 05 04 13:14:00.315" version="7.5" type="Module" synthesis="synplify" source_format="Verilog HDL">
+  <Package>
+		<File name="" type="" modified="2017 05 04 13:14:00.192"/>
+		<File name="c:/02_elektronik/089_hpcalcs/01_woodstock/05_implementations/05_xo2_7k0_67/regbank.hex" type="mem" modified="2017 04 30 10:22:24.160"/>
+		<File name="regbank_lattice.lpc" type="lpc" modified="2017 05 04 13:13:57.822"/>
+		<File name="regbank_lattice.v" type="top_level_verilog" modified="2017 05 04 13:13:57.895"/>
+		<File name="regbank_lattice_tmpl.v" type="template_verilog" modified="2017 05 04 13:13:57.898"/>
+		<File name="tb_regbank_lattice_tmpl.v" type="testbench_verilog" modified="2017 05 04 13:13:57.915"/>
+  </Package>
+</DiamondModule>

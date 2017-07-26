@@ -1,0 +1,540 @@
+(edif regbank_lattice
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2017 5 31 16 14 54)
+      (program "SCUBA" (version "Diamond (64-bit) 3.6.0.83.4"))))
+      (comment "C:\lscc\diamond\3.6_x64\ispfpga\bin\nt64\scuba.exe -w -n regbank_lattice -lang verilog -synth synplify -bus_exp 7 -bb -arch xo2c00 -type bram -wp 11 -rp 1010 -data_width 4 -rdata_width 4 -num_rows 2048 -cascade -1 -mem_init0 -writemodeA READBEFOREWRITE -writemodeB READBEFOREWRITE ")
+  (library ORCLIB
+    (edifLevel 0)
+    (technology
+      (numberDefinition))
+    (cell VHI
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell VLO
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell DP8KC
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port DIA8
+            (direction INPUT))
+          (port DIA7
+            (direction INPUT))
+          (port DIA6
+            (direction INPUT))
+          (port DIA5
+            (direction INPUT))
+          (port DIA4
+            (direction INPUT))
+          (port DIA3
+            (direction INPUT))
+          (port DIA2
+            (direction INPUT))
+          (port DIA1
+            (direction INPUT))
+          (port DIA0
+            (direction INPUT))
+          (port ADA12
+            (direction INPUT))
+          (port ADA11
+            (direction INPUT))
+          (port ADA10
+            (direction INPUT))
+          (port ADA9
+            (direction INPUT))
+          (port ADA8
+            (direction INPUT))
+          (port ADA7
+            (direction INPUT))
+          (port ADA6
+            (direction INPUT))
+          (port ADA5
+            (direction INPUT))
+          (port ADA4
+            (direction INPUT))
+          (port ADA3
+            (direction INPUT))
+          (port ADA2
+            (direction INPUT))
+          (port ADA1
+            (direction INPUT))
+          (port ADA0
+            (direction INPUT))
+          (port CEA
+            (direction INPUT))
+          (port OCEA
+            (direction INPUT))
+          (port CLKA
+            (direction INPUT))
+          (port WEA
+            (direction INPUT))
+          (port CSA2
+            (direction INPUT))
+          (port CSA1
+            (direction INPUT))
+          (port CSA0
+            (direction INPUT))
+          (port RSTA
+            (direction INPUT))
+          (port DIB8
+            (direction INPUT))
+          (port DIB7
+            (direction INPUT))
+          (port DIB6
+            (direction INPUT))
+          (port DIB5
+            (direction INPUT))
+          (port DIB4
+            (direction INPUT))
+          (port DIB3
+            (direction INPUT))
+          (port DIB2
+            (direction INPUT))
+          (port DIB1
+            (direction INPUT))
+          (port DIB0
+            (direction INPUT))
+          (port ADB12
+            (direction INPUT))
+          (port ADB11
+            (direction INPUT))
+          (port ADB10
+            (direction INPUT))
+          (port ADB9
+            (direction INPUT))
+          (port ADB8
+            (direction INPUT))
+          (port ADB7
+            (direction INPUT))
+          (port ADB6
+            (direction INPUT))
+          (port ADB5
+            (direction INPUT))
+          (port ADB4
+            (direction INPUT))
+          (port ADB3
+            (direction INPUT))
+          (port ADB2
+            (direction INPUT))
+          (port ADB1
+            (direction INPUT))
+          (port ADB0
+            (direction INPUT))
+          (port CEB
+            (direction INPUT))
+          (port OCEB
+            (direction INPUT))
+          (port CLKB
+            (direction INPUT))
+          (port WEB
+            (direction INPUT))
+          (port CSB2
+            (direction INPUT))
+          (port CSB1
+            (direction INPUT))
+          (port CSB0
+            (direction INPUT))
+          (port RSTB
+            (direction INPUT))
+          (port DOA8
+            (direction OUTPUT))
+          (port DOA7
+            (direction OUTPUT))
+          (port DOA6
+            (direction OUTPUT))
+          (port DOA5
+            (direction OUTPUT))
+          (port DOA4
+            (direction OUTPUT))
+          (port DOA3
+            (direction OUTPUT))
+          (port DOA2
+            (direction OUTPUT))
+          (port DOA1
+            (direction OUTPUT))
+          (port DOA0
+            (direction OUTPUT))
+          (port DOB8
+            (direction OUTPUT))
+          (port DOB7
+            (direction OUTPUT))
+          (port DOB6
+            (direction OUTPUT))
+          (port DOB5
+            (direction OUTPUT))
+          (port DOB4
+            (direction OUTPUT))
+          (port DOB3
+            (direction OUTPUT))
+          (port DOB2
+            (direction OUTPUT))
+          (port DOB1
+            (direction OUTPUT))
+          (port DOB0
+            (direction OUTPUT)))))
+    (cell regbank_lattice
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port (array (rename DataInA "DataInA(3:0)") 4)
+            (direction INPUT))
+          (port (array (rename DataInB "DataInB(3:0)") 4)
+            (direction INPUT))
+          (port (array (rename AddressA "AddressA(10:0)") 11)
+            (direction INPUT))
+          (port (array (rename AddressB "AddressB(10:0)") 11)
+            (direction INPUT))
+          (port ClockA
+            (direction INPUT))
+          (port ClockB
+            (direction INPUT))
+          (port ClockEnA
+            (direction INPUT))
+          (port ClockEnB
+            (direction INPUT))
+          (port WrA
+            (direction INPUT))
+          (port WrB
+            (direction INPUT))
+          (port ResetA
+            (direction INPUT))
+          (port ResetB
+            (direction INPUT))
+          (port (array (rename QA "QA(3:0)") 4)
+            (direction OUTPUT))
+          (port (array (rename QB "QB(3:0)") 4)
+            (direction OUTPUT)))
+        (property NGD_DRC_MASK (integer 1))
+        (contents
+          (instance scuba_vhi_inst
+            (viewRef view1 
+              (cellRef VHI)))
+          (instance scuba_vlo_inst
+            (viewRef view1 
+              (cellRef VLO)))
+          (instance regbank_lattice_0_0_0
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "regbank_lattice.lpc"))
+            (property MEM_INIT_FILE
+              (string "INIT_ALL_0s"))
+            (property INITVAL_1F
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_1E
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_1D
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_1C
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_1B
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_1A
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_19
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_18
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_17
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_16
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_15
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_14
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_13
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_12
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_11
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_10
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_0F
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_0E
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_0D
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_0C
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_0B
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_0A
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_09
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_08
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_07
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_06
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_05
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_04
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_03
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_02
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_01
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property INITVAL_00
+              (string "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"))
+            (property CSDECODE_B
+              (string "0b000"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "READBEFOREWRITE"))
+            (property WRITEMODE_A
+              (string "READBEFOREWRITE"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "4"))
+            (property DATA_WIDTH_A
+              (string "4")))
+          (net scuba_vhi
+            (joined
+              (portRef Z (instanceRef scuba_vhi_inst))))
+          (net scuba_vlo
+            (joined
+              (portRef Z (instanceRef scuba_vlo_inst))
+              (portRef CSB2 (instanceRef regbank_lattice_0_0_0))
+              (portRef CSA2 (instanceRef regbank_lattice_0_0_0))
+              (portRef CSB1 (instanceRef regbank_lattice_0_0_0))
+              (portRef CSA1 (instanceRef regbank_lattice_0_0_0))
+              (portRef CSB0 (instanceRef regbank_lattice_0_0_0))
+              (portRef CSA0 (instanceRef regbank_lattice_0_0_0))
+              (portRef ADB1 (instanceRef regbank_lattice_0_0_0))
+              (portRef ADA1 (instanceRef regbank_lattice_0_0_0))
+              (portRef ADB0 (instanceRef regbank_lattice_0_0_0))
+              (portRef ADA0 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIB8 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIA8 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIB7 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIA7 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIB6 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIA6 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIB5 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIA5 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIB4 (instanceRef regbank_lattice_0_0_0))
+              (portRef DIA4 (instanceRef regbank_lattice_0_0_0))))
+          (net dataout13
+            (joined
+              (portRef (member QB 0))
+              (portRef DOB3 (instanceRef regbank_lattice_0_0_0))))
+          (net dataout12
+            (joined
+              (portRef (member QB 1))
+              (portRef DOB2 (instanceRef regbank_lattice_0_0_0))))
+          (net dataout11
+            (joined
+              (portRef (member QB 2))
+              (portRef DOB1 (instanceRef regbank_lattice_0_0_0))))
+          (net dataout10
+            (joined
+              (portRef (member QB 3))
+              (portRef DOB0 (instanceRef regbank_lattice_0_0_0))))
+          (net dataout03
+            (joined
+              (portRef (member QA 0))
+              (portRef DOA3 (instanceRef regbank_lattice_0_0_0))))
+          (net dataout02
+            (joined
+              (portRef (member QA 1))
+              (portRef DOA2 (instanceRef regbank_lattice_0_0_0))))
+          (net dataout01
+            (joined
+              (portRef (member QA 2))
+              (portRef DOA1 (instanceRef regbank_lattice_0_0_0))))
+          (net dataout00
+            (joined
+              (portRef (member QA 3))
+              (portRef DOA0 (instanceRef regbank_lattice_0_0_0))))
+          (net ResetB
+            (joined
+              (portRef ResetB)
+              (portRef RSTB (instanceRef regbank_lattice_0_0_0))))
+          (net ResetA
+            (joined
+              (portRef ResetA)
+              (portRef RSTA (instanceRef regbank_lattice_0_0_0))))
+          (net wren1
+            (joined
+              (portRef WrB)
+              (portRef WEB (instanceRef regbank_lattice_0_0_0))))
+          (net wren0
+            (joined
+              (portRef WrA)
+              (portRef WEA (instanceRef regbank_lattice_0_0_0))))
+          (net ClockEnB
+            (joined
+              (portRef ClockEnB)
+              (portRef OCEB (instanceRef regbank_lattice_0_0_0))
+              (portRef CEB (instanceRef regbank_lattice_0_0_0))))
+          (net ClockEnA
+            (joined
+              (portRef ClockEnA)
+              (portRef OCEA (instanceRef regbank_lattice_0_0_0))
+              (portRef CEA (instanceRef regbank_lattice_0_0_0))))
+          (net clk1
+            (joined
+              (portRef ClockB)
+              (portRef CLKB (instanceRef regbank_lattice_0_0_0))))
+          (net clk0
+            (joined
+              (portRef ClockA)
+              (portRef CLKA (instanceRef regbank_lattice_0_0_0))))
+          (net addr110
+            (joined
+              (portRef (member AddressB 0))
+              (portRef ADB12 (instanceRef regbank_lattice_0_0_0))))
+          (net addr19
+            (joined
+              (portRef (member AddressB 1))
+              (portRef ADB11 (instanceRef regbank_lattice_0_0_0))))
+          (net addr18
+            (joined
+              (portRef (member AddressB 2))
+              (portRef ADB10 (instanceRef regbank_lattice_0_0_0))))
+          (net addr17
+            (joined
+              (portRef (member AddressB 3))
+              (portRef ADB9 (instanceRef regbank_lattice_0_0_0))))
+          (net addr16
+            (joined
+              (portRef (member AddressB 4))
+              (portRef ADB8 (instanceRef regbank_lattice_0_0_0))))
+          (net addr15
+            (joined
+              (portRef (member AddressB 5))
+              (portRef ADB7 (instanceRef regbank_lattice_0_0_0))))
+          (net addr14
+            (joined
+              (portRef (member AddressB 6))
+              (portRef ADB6 (instanceRef regbank_lattice_0_0_0))))
+          (net addr13
+            (joined
+              (portRef (member AddressB 7))
+              (portRef ADB5 (instanceRef regbank_lattice_0_0_0))))
+          (net addr12
+            (joined
+              (portRef (member AddressB 8))
+              (portRef ADB4 (instanceRef regbank_lattice_0_0_0))))
+          (net addr11
+            (joined
+              (portRef (member AddressB 9))
+              (portRef ADB3 (instanceRef regbank_lattice_0_0_0))))
+          (net addr10
+            (joined
+              (portRef (member AddressB 10))
+              (portRef ADB2 (instanceRef regbank_lattice_0_0_0))))
+          (net addr010
+            (joined
+              (portRef (member AddressA 0))
+              (portRef ADA12 (instanceRef regbank_lattice_0_0_0))))
+          (net addr09
+            (joined
+              (portRef (member AddressA 1))
+              (portRef ADA11 (instanceRef regbank_lattice_0_0_0))))
+          (net addr08
+            (joined
+              (portRef (member AddressA 2))
+              (portRef ADA10 (instanceRef regbank_lattice_0_0_0))))
+          (net addr07
+            (joined
+              (portRef (member AddressA 3))
+              (portRef ADA9 (instanceRef regbank_lattice_0_0_0))))
+          (net addr06
+            (joined
+              (portRef (member AddressA 4))
+              (portRef ADA8 (instanceRef regbank_lattice_0_0_0))))
+          (net addr05
+            (joined
+              (portRef (member AddressA 5))
+              (portRef ADA7 (instanceRef regbank_lattice_0_0_0))))
+          (net addr04
+            (joined
+              (portRef (member AddressA 6))
+              (portRef ADA6 (instanceRef regbank_lattice_0_0_0))))
+          (net addr03
+            (joined
+              (portRef (member AddressA 7))
+              (portRef ADA5 (instanceRef regbank_lattice_0_0_0))))
+          (net addr02
+            (joined
+              (portRef (member AddressA 8))
+              (portRef ADA4 (instanceRef regbank_lattice_0_0_0))))
+          (net addr01
+            (joined
+              (portRef (member AddressA 9))
+              (portRef ADA3 (instanceRef regbank_lattice_0_0_0))))
+          (net addr00
+            (joined
+              (portRef (member AddressA 10))
+              (portRef ADA2 (instanceRef regbank_lattice_0_0_0))))
+          (net datain13
+            (joined
+              (portRef (member DataInB 0))
+              (portRef DIB3 (instanceRef regbank_lattice_0_0_0))))
+          (net datain12
+            (joined
+              (portRef (member DataInB 1))
+              (portRef DIB2 (instanceRef regbank_lattice_0_0_0))))
+          (net datain11
+            (joined
+              (portRef (member DataInB 2))
+              (portRef DIB1 (instanceRef regbank_lattice_0_0_0))))
+          (net datain10
+            (joined
+              (portRef (member DataInB 3))
+              (portRef DIB0 (instanceRef regbank_lattice_0_0_0))))
+          (net datain03
+            (joined
+              (portRef (member DataInA 0))
+              (portRef DIA3 (instanceRef regbank_lattice_0_0_0))))
+          (net datain02
+            (joined
+              (portRef (member DataInA 1))
+              (portRef DIA2 (instanceRef regbank_lattice_0_0_0))))
+          (net datain01
+            (joined
+              (portRef (member DataInA 2))
+              (portRef DIA1 (instanceRef regbank_lattice_0_0_0))))
+          (net datain00
+            (joined
+              (portRef (member DataInA 3))
+              (portRef DIA0 (instanceRef regbank_lattice_0_0_0))))))))
+  (design regbank_lattice
+    (cellRef regbank_lattice
+      (libraryRef ORCLIB)))
+)
