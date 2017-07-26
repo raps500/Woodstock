@@ -1,4 +1,4 @@
-[Woodstock recreation for small FPGAs]
+# Woodstock recreation for small FPGAs
 
 This is a implementation of a Woodstock machine (like the HP-67) for FPGAs.
 This current implemenation requires a Lattice MachXO2 with at least 2000 LEs and
@@ -44,7 +44,7 @@ Design Summary
    Number of ECLKSYNCA:  0 out of 4 (0%)
    Number of ECLKBRIDGECS:  0 out of 2 (0%)
 
-[Hardware]
+# Hardware
 
 In the 01_PS11_7000_RevA folder, you can find the design files for the current prototype board.
 This board has a landscape format (not like the real HP-67, more like the HP-11C). The board/schematic
