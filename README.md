@@ -10,7 +10,7 @@ used is shown below. The populated FPGA is a LCMXO2-7000ZE.
 Compilation report
 
 
-Design Summary
+Design Summary<br>
    Number of registers:    290 out of  7209 (4%)
       PFU registers:          289 out of  6864 (4%)
       PIO registers:            1 out of   345 (0%)
@@ -60,10 +60,16 @@ value was chosen more or less arbitrarly. The hardware trace function (activated
 slows down the processor to about 800 opcodes per second, but the calculator remains usable, albeit slow.
 
 <p align=left">
-  <img src="/01_PS11_7000_RevA/PS11_Top.jpg>
-  <img src="/01_PS11_7000_RevA/PS11_Bottom.jpg>
-  <img src="/01_PS11_7000_RevA/IMG_20170427_134208272.jpg>
-  <img src="/01_PS11_7000_RevA/PS11_67.jpg>
+  <img src="/01_PS11_7000_RevA/PS11_Top.jpg">
+</p>
+<p align=left">
+  <img src="/01_PS11_7000_RevA/PS11_Bottom.jpg">
+</p>
+<p align=left">
+  <img src="/01_PS11_7000_RevA/IMG_20170427_134208272.jpg">
+</p>
+<p align=left">
+  <img src="/01_PS11_7000_RevA/PS11_67.jpg">
 </p>
 
 
